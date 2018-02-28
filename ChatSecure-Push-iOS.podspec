@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ChatSecure-Push-iOS"
-  s.version      = "1.0"
+  s.version      = "1.0-glacier"
   s.summary      = "The iOS SDK for ChatSecure-Push-Server"
 
   s.description  = <<-DESC
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/ChatSecure/ChatSecure-Push-iOS.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/afriedmanGlacier/ChatSecure-Push-iOS.git", :tag => s.version.to_s }
 
   s.source_files  = "Classes", "ChatSecurePush-SDK/*.swift"
 end
