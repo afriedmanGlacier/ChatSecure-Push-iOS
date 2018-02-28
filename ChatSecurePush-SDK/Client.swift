@@ -371,6 +371,19 @@ public enum jsonKeys: String {
                     }
                     
                     endpoint = try Deserializer.pubsub(data: data)
+                    
+                    if ((endpoint?.isEmpty) != nil) {
+                        // cut off /api/v1
+                        let aString = self.baseUrl.absoluteString
+                        let word = aString.range(of:"/api")
+                        let http = aString.range(of:"http://")
+                        
+                        let start = http!.upperBound
+                        let end = word!.lowerBound
+                        let range = start..<end
+                        
+                        endpoint = String(aString[range])
+                    }
                 } catch let err as NSError {
                     error = err
                 }
