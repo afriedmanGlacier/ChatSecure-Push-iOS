@@ -376,9 +376,9 @@ public enum jsonKeys: String {
                         // cut off /api/v1
                         let aString = self.baseUrl.absoluteString
                         let word = aString.range(of:"/api")
-                        let http = aString.range(of:"http://")
+                        let https = aString.range(of:"https://")
                         
-                        let start = http!.upperBound
+                        let start = https!.upperBound
                         let end = word!.lowerBound
                         let range = start..<end
                         
